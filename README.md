@@ -1,3 +1,3 @@
 # codeFun
 javascript
-1) Anagram.java - Minimum Number of swaps/replacement required to make two Strings Anagram  using char array 
+1) Anagram.java - Count minimum Number of swaps/replacement required to make two strings Anagram of each other using char array 
