@@ -3,6 +3,7 @@ import java.util.Map;
 
 public class Fibonacci {
     static int fibonacciUsingRecursion(int n){
+        //Without Memoization:Time Complexity: O(2^n)Space Complexity: O(n)
         int result ;
         if(n == 1  || n == 2) {
             return 1;
@@ -14,6 +15,8 @@ public class Fibonacci {
     }
 
     static int fibonacciUsingRecursionAndMemoization(int n, Map<Integer, Integer> memo){
+         //With Memoization:Time Complexity: O(n)Space Complexity: O(n)
+        int result ;
         int result ;
         if(n == 1  || n == 2) {
             return 1;
@@ -29,6 +32,7 @@ public class Fibonacci {
     }
 
     static int fibonacciWithoutRecursion(int n) {
+        //Time Complexity: O(n)Space Complexity: O(1)
         int a = 0, b = 1, c;
         if (n == 0)
             return a;
