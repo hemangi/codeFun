@@ -30,8 +30,8 @@ public class Anagram {
     static long makeAnagramWithMiniumMinimumDeletion(String a ,String b) {
         int charCount[] = new int[26];
         a.chars().forEach(c -> charCount[c -'a']++);
-        b.chars().filter(c -> charCount[c - 'a']-- <=0).count();
-        return Arrays.stream(charCount).reduce(0 , (i ,j ) ->  (Math.abs(i)+Math.abs(j)));
+        b.chars().forEach(c -> charCount[c - 'a']--);
+        return Arrays.stream(charCount).reduce(0 , (i ,j ) ->  ( Math.abs(i) + Math.abs(j)));
     }
     public static void main(String[] args)
     {
