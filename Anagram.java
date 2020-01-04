@@ -14,7 +14,7 @@
 //Method 1 using char array
 // Counts the no of swap/replacement required
 public class Anagram {
-
+     // below method calculate minimum number of relplcement to make string anagram of each other
     static long countReplacementToMakeTwoStringAnagram(String s1, String s2)
     {
         // store the count of character
@@ -25,6 +25,13 @@ public class Anagram {
         long count  = s2.chars().filter(i -> charCount[i - 'a']-- <=0).count();
 
         return count;
+    }
+    // below methos returns minimum number of deletion in both string to make anagram of each other
+    static long makeAnagramWithMiniumMinimumDeletion(String a ,String b) {
+        int charCount[] = new int[26];
+        a.chars().forEach(c -> charCount[c -'a']++);
+        b.chars().filter(c -> charCount[c - 'a']-- <=0).count();
+        return Arrays.stream(charCount).reduce(0 , (i ,j ) ->  (Math.abs(i)+Math.abs(j)));
     }
     public static void main(String[] args)
     {
